@@ -53,7 +53,7 @@ a{
 
 #name{
     position: absolute;
-    font-size: 4em;
+    font-size: 70px;
     top: 30%;
     left:10%;
     font-family: 'Roboto', sans-serif;
@@ -88,6 +88,10 @@ a{
     opacity:0;
     display: flex;
     justify-content: space-around;
+   
+}
+#social>a>i{
+    font-size: 50px;
 }
 #myImg:hover + #social{
     animation-name: displaySocial;
@@ -110,12 +114,15 @@ a{
     left:-35%;
     padding:20px;
     width:400px;
-    border:5px rgb(183, 0, 255) solid ;
+    /* border:5px rgb(183, 0, 255) solid ; */
     border-radius: 20px;
-
+    color:rgb(183, 0, 255);
     animation-name: AbutMeANimt;
     animation-duration: 5s;
     animation-fill-mode: forwards;
+    font-size: 20px;
+    font-family: 'Lobster',cursive;
+    line-height: 35px;
 }
 @keyframes AbutMeANimt
 {
@@ -130,6 +137,10 @@ a{
     text-shadow: 1.5px 1.5px white;
     padding-top: 5px;
     margin-left: 20px;
+}
+#skills{
+    background-image: url(img/skillBack);
+    background-size: 1400px;
 }
 #skillsImg{
     display: grid;
@@ -175,50 +186,33 @@ a{
     grid-column-start: 5;
     grid-column-end: 6;
 }
-#Edu>table>tbody>tr>td{
-    border: 5px black solid;
-    margin: 2px;
-    font-size: 35px;
-    background-color: rgb(132, 0, 184);
-    
-    
+
+#edu{
+    background-image: url(img/eduBack.jpg);
+    height: 500px;
 }
-#Edu>table>tbody>tr>td:hover{
-    background-color:rgb(193, 45, 252) ;
+#eduhead{
+    color:rgb(0, 162, 255);
 }
-#Edu>table>tbody>tr>th{
-    border: 5px black solid;
-    margin: 2px;
-    font-size: 35px; 
-    background-color: rgb(132, 0, 184);   
-    
-}
-#Edu>table>tbody>tr>th:hover{
-    background-color:rgb(193, 45, 252) ;
-}
-#Edu>table{
-    border-collapse: collapse;
-    margin: 5px;
-}
-#StrengthBdy>ul>li{
+#edubody{
+    display: flex;
     font-size: 20px;
-    padding-bottom: 5px;
-    color: rgb(245, 1, 245);
-    text-shadow: 1px 1px rgb(17, 0, 255);
-    /* opacity: 0; */
+    justify-content: space-evenly;
 }
-/* #strength:hover>#StrengthBdy>ul>li{
-    animation-name: StrengthAnimt;
-    animation-duration: 5s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
+#edubody>div:nth-child(odd){
+    width: 20%;
 }
-
- @keyframes StrengthAnimt{
-    from{opacity: 0;}
-    to{opacity:1;}
-} */
-
+#edubody>.line{
+    width:0.3%;
+    height: 100px;
+    background-color: red;
+}
+#proj{
+    background-image: url(img/projectBack.jpg);
+}
+#projhead{
+    color:rgb(255, 0, 0);
+}
 #Copyryt{
     font-size: 20px;
     text-align: center;
@@ -226,7 +220,7 @@ a{
     margin-bottom: -10px;
 }
 #ContctInfo{
-    color:rgb(255, 0, 0);
+    
     font-weight: bold;
     
     display: grid;
@@ -277,28 +271,35 @@ a{
     height: 50px;
     width: 200px;
 }
-form{
-    position: absolute;
-    top:100%;
-    width: 130px;
-    right: 1.7%; 
-    background-color: brown;
-    padding: 10px;
-    display: none;
-    animation-name: ContactAnimt;
-    animation-duration: 3s;
-    
-}
-#contact:hover>form,form:hover{
-    
-    display: block;
-}
-@keyframes ContactAnimt{
-    from{opacity: 0;}
-    to{opacity: 1;}
-}
+
 form>button{
     margin-left: 40px;
     height: 25px;
     width: 60px;
+}
+.fa-facebook{
+    color:rgb(59, 89, 152);
+
+}
+
+.fa-instagram{
+    color: #ff3489;
+
+}
+.fa-twitter{
+    color:rgb(0, 172, 238);
+
+}
+.fa-linkedin{
+    color:rgb(14, 118, 168);
+
+}
+.fa-github{
+    color:white;
+
+}
+
+i{
+    font-size: 40px;
+
 }
