@@ -1,0 +1,304 @@
+body{
+    background-color: black;
+    color: white;
+    overflow-x: hidden;
+}
+.header{
+    background-color: black;
+    display: flex;
+    align-items:center;
+    position: fixed;
+    width: 100%;
+    justify-content: flex-end;
+    height: 100px;
+    z-index: 2;
+    margin-top: -8px;
+    border-bottom: 3px red solid;
+}
+.header>:last-child{
+    margin-right: 12px;
+}
+.header>a>div{
+    color: rgb(221, 0, 0);
+    font-weight: bold;
+    text-shadow: 1.5px 1.5px white;
+    font-size: 1.5em;
+    margin-left: 10px;
+    height: 30px;
+    border: 3px black solid;
+    padding-bottom: 5px;
+    padding: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.header>a>div:hover{
+    border:3px red solid;
+    box-shadow: 0 0 12px 5px red;
+    border-radius: 10px;
+    animation-name: shadowAnimt;
+    animation-duration: 0.8s;
+}
+
+.imgAftrHead>img{
+    width: 1400px;
+    height: 650px;
+    margin-left: -5px;
+    opacity: 0.5;
+    position: relative;
+}
+
+#name{
+    position: absolute;
+    font-size: 4em;
+    top: 30%;
+    left:10%;
+    font-family: 'Roboto', sans-serif;
+    /* animation-name: nameAnimt;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate; */
+}
+
+@keyframes shadowAnimt{
+    from{ box-shadow: 0 0 12px 5px black;}
+    to{ box-shadow: 0 0 12px 5px red;}
+}
+/* @keyframes nameAnimt{
+    from{transform:scale(1,1)}
+    to{transform:scale(1.5,1.5)}
+} */
+#myImg{
+    position: absolute;
+    top: 25%;
+    left:60%;
+    
+}
+#myImg>img{
+    border: 1px blue solid;
+}#social{
+    color:white;
+    position: absolute;
+    top: 85%;
+    left:60%;
+    width: 400px;
+    opacity:0;
+    display: flex;
+    justify-content: space-around;
+}
+#myImg:hover + #social{
+    animation-name: displaySocial;
+    animation-duration:  1s;
+    animation-fill-mode: forwards;
+}
+#social:hover{
+    animation-name: displaySocial;
+    animation-duration:  1s;
+    animation-fill-mode: forwards;
+}
+@keyframes displaySocial{
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+
+#AbutMe{
+    position: absolute;
+    top:50%;
+    left:-35%;
+    padding:20px;
+    width:400px;
+    border:5px rgb(183, 0, 255) solid ;
+    border-radius: 20px;
+
+    animation-name: AbutMeANimt;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+}
+@keyframes AbutMeANimt
+{
+    0%{left:-35%}
+    65%{left:25%}
+    100%{left:10%}
+}
+.topic{
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(0, 241, 221);
+    /* border-bottom:5px crimson solid; */       
+    text-shadow: 1.5px 1.5px white;
+    padding-top: 5px;
+    margin-left: 20px;
+}
+#skillsImg{
+    display: grid;
+    grid-template-columns:200px 200px 200px 20px 200px 200px 200px 60px;
+    grid-template-rows: 220px 200px;
+    grid-row-gap:1px;
+    grid-column-gap:0.5px;
+}
+#c{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+#html{
+    grid-column-start: 4;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+#java{
+    grid-column-start: 6;
+    grid-column-end: 9;
+    grid-row-end: 3;
+    grid-row-start: 1;
+}
+#sql{
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+#css{
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 3;
+    grid-column-end: 5;
+    
+}
+#cpp{
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 5;
+    grid-column-end: 6;
+}
+#Edu>table>tbody>tr>td{
+    border: 5px black solid;
+    margin: 2px;
+    font-size: 35px;
+    background-color: rgb(132, 0, 184);
+    
+    
+}
+#Edu>table>tbody>tr>td:hover{
+    background-color:rgb(193, 45, 252) ;
+}
+#Edu>table>tbody>tr>th{
+    border: 5px black solid;
+    margin: 2px;
+    font-size: 35px; 
+    background-color: rgb(132, 0, 184);   
+    
+}
+#Edu>table>tbody>tr>th:hover{
+    background-color:rgb(193, 45, 252) ;
+}
+#Edu>table{
+    border-collapse: collapse;
+    margin: 5px;
+}
+#StrengthBdy>ul>li{
+    font-size: 20px;
+    padding-bottom: 5px;
+    color: rgb(245, 1, 245);
+    text-shadow: 1px 1px rgb(17, 0, 255);
+    /* opacity: 0; */
+}
+/* #strength:hover>#StrengthBdy>ul>li{
+    animation-name: StrengthAnimt;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+ @keyframes StrengthAnimt{
+    from{opacity: 0;}
+    to{opacity:1;}
+} */
+
+#Copyryt{
+    font-size: 20px;
+    text-align: center;
+    height: 40px;
+    margin-bottom: -10px;
+}
+#ContctInfo{
+    color:rgb(255, 0, 0);
+    font-weight: bold;
+    
+    display: grid;
+    height: 150px;
+    padding: 10px;
+    grid-template-columns: 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px;
+    grid-template-rows: 50px 50px 50px;
+}
+#scl>a{
+    margin-right: 30px;
+}
+#scl{
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start:6 ;
+    grid-column-end: 11;
+}
+#phn{
+    font-size: 25px;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start:1 ;
+    grid-column-end: 7;
+}
+#eml{
+    font-size: 25px;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start:1 ;
+    grid-column-end: 6;
+}
+#map{
+    grid-row-start: 1;
+    grid-row-end: 4;
+    grid-column-start: 11;
+    grid-column-end: 14;
+}
+#resume{
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+}
+#resume>button{
+    cursor: pointer;
+    font-size: 20px;
+    height: 50px;
+    width: 200px;
+}
+form{
+    position: absolute;
+    top:100%;
+    width: 130px;
+    right: 1.7%; 
+    background-color: brown;
+    padding: 10px;
+    display: none;
+    animation-name: ContactAnimt;
+    animation-duration: 3s;
+    
+}
+#contact:hover>form,form:hover{
+    
+    display: block;
+}
+@keyframes ContactAnimt{
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+form>button{
+    margin-left: 40px;
+    height: 25px;
+    width: 60px;
+}
