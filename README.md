@@ -6,3 +6,7 @@ ver 2:	Strength removed.
 	Eduction changed.
 	use social icons in place of pics.
 	every element has now a background image.
+	
+ver 3:	education changed.
+	footer is responsive now.
+	
