@@ -2,6 +2,7 @@ body{
     background-color: black;
     color: white;
     overflow-x: hidden;
+    
 }
 .header{
     background-color: black;
@@ -12,6 +13,7 @@ body{
     justify-content: flex-end;
     height: 100px;
     z-index: 2;
+    
     margin-top: -8px;
     border-bottom: 3px red solid;
 }
@@ -189,7 +191,7 @@ a{
 
 #edu{
     background-image: url(img/eduBack.jpg);
-    height: 500px;
+    height: 650px;
 }
 #eduhead{
     color:rgb(0, 162, 255);
@@ -198,20 +200,71 @@ a{
     display: flex;
     font-size: 20px;
     justify-content: space-evenly;
+    font-family:'Baloo Thambi 2', cursive;
+    
+    font-size: 20px;
+    color:rgb(255, 0, 179);
+
+}
+ul{
+    list-style:lower-greek;
 }
 #edubody>div:nth-child(odd){
     width: 20%;
 }
 #edubody>.line{
     width:0.3%;
-    height: 100px;
+    height: 300px;
     background-color: red;
+    
+}
+.edutitle{
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    font-weight: bolder;
 }
 #proj{
     background-image: url(img/projectBack.jpg);
+    height: 650px;
+    
 }
 #projhead{
     color:rgb(255, 0, 0);
+    font-size: 30px;
+}
+dd{
+    font-weight: bold;
+    font-size: 20px;
+    line-height: initial;
+    padding-bottom: initial;
+}
+#projbdy>ul{
+    font-weight: bolder;
+    list-style-type: square;
+    color:rgb(66, 0, 104);
+    font-size: 30px;
+}
+#projbdy>ul>li{
+    padding-bottom: 15px;
+}
+#projviewer{
+    position: absolute;
+    border: 2px red solid;
+    width: 1px;
+    height: 1px;
+    left: 70%;
+    overflow: hidden;
+}
+#dsc1:focus +#projviewer {
+    animation-name: desciptionAnimt;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+
+}
+@keyframes desciptionAnimt{
+
+    form{transform: scale(1,1);}
+    to{transform: scale(100,100);}
 }
 #Copyryt{
     font-size: 20px;
@@ -222,60 +275,37 @@ a{
 #ContctInfo{
     
     font-weight: bold;
-    
-    display: grid;
+    position: relative;
     height: 150px;
     padding: 10px;
-    grid-template-columns: 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px;
-    grid-template-rows: 50px 50px 50px;
+   
 }
 #scl>a{
     margin-right: 30px;
 }
-#scl{
-    grid-row-start: 3;
-    grid-row-end: 4;
-    grid-column-start:6 ;
-    grid-column-end: 11;
-}
-#phn{
-    font-size: 25px;
-    grid-row-start: 2;
-    grid-row-end: 3;
-    grid-column-start:1 ;
-    grid-column-end: 7;
+iframe{
+    position: absolute;
+    right: 6%;
+    width: 270px;
+    height: 170px;
 }
 #eml{
+    margin-left: 10px;
     font-size: 25px;
-    grid-row-start: 3;
-    grid-row-end: 4;
-    grid-column-start:1 ;
-    grid-column-end: 6;
-}
-#map{
-    grid-row-start: 1;
-    grid-row-end: 4;
-    grid-column-start: 11;
-    grid-column-end: 14;
-}
-#resume{
-    grid-row-start: 1;
-    grid-row-end: 2;
-    grid-column-start: 1;
-    grid-column-end: 3;
-
 }
 #resume>button{
     cursor: pointer;
+    margin-left: 10px;
     font-size: 20px;
     height: 50px;
     width: 200px;
 }
 
-form>button{
-    margin-left: 40px;
-    height: 25px;
-    width: 60px;
+
+#scl{
+    position: absolute;
+    left:40%;
+    bottom: 10%;
 }
 .fa-facebook{
     color:rgb(59, 89, 152);
@@ -302,4 +332,148 @@ form>button{
 i{
     font-size: 40px;
 
+}
+
+/* MEDIA CONTROL STARTS FROM HERE*/
+@media screen and (max-width:1200px)
+{
+    #Copyryt{
+        font-size: 19px;
+        height: 38px;
+    }
+    iframe{
+        position: absolute;
+        right: 5%;
+        width: 250px;
+        height: 160px;
+    }
+    #scl{
+        position: absolute;
+        left:36%;
+        bottom: 10%;
+    }
+    #eml{
+        font-size: 21px;
+    }
+    #resume>button{
+        cursor: pointer;
+        font-size: 18px;
+        height: 47px;
+        width: 180px;
+    }
+    
+    i{
+        font-size: 36px;
+    }
+     
+}
+
+
+@media screen and (max-width:1050px)
+{
+    #Copyryt{
+        font-size: 18px;
+        height: 35px;
+    }
+    iframe{
+        position: absolute;
+        right: 3%;
+        width: 200px;
+        height: 120px;
+    }
+    #scl{
+        position: absolute;
+        left:36%;
+        bottom: 10%;
+    }
+    #eml{
+        font-size: 19px;
+    }
+    #resume>button{
+        cursor: pointer;
+        font-size: 16px;
+        height: 42px;
+        width: 160px;
+    }
+    
+    i{
+        font-size: 32px;
+    }
+     
+}
+
+
+@media screen and (max-width:900px)
+{
+    #Copyryt{
+        font-size: 15px;
+        height: 30px;
+    }
+    iframe{
+        position: absolute;
+        right: 3%;
+        bottom: 40%;
+        width: 200px;
+        height: 120px;
+    }
+    #scl{
+        position: absolute;
+        left:32%;
+        bottom: 10%;
+    }
+    #eml{
+        font-size: 17px;
+    }
+    #resume>button{
+        cursor: pointer;
+        font-size: 14px;
+        height: 40px;
+        width: 140px;
+    }
+    
+    i{
+        font-size: 30px;
+    }
+    #scl>a{
+        margin-right: 25px;
+    }
+     
+}
+
+
+@media screen and (max-width:620px)
+{
+    #Copyryt{
+        font-size: 12px;
+        height: 25px;
+    }
+    iframe{
+        position: absolute;
+        right: 3%;
+        bottom: 40%;
+        width: 160px;
+        height: 100px;
+    }
+    #scl{
+        position: absolute;
+        left:28%;
+        bottom: 10%;
+    }
+    #eml{
+        font-size: 15px;
+    }
+    #resume>button{
+        cursor: pointer;
+        font-size: 11px;
+        height: 38px;
+        width: 120px;
+    }
+    
+    i{
+        font-size: 25px;
+    }
+    #scl>a{
+        margin-right: 20px;
+    }
+     
 }
